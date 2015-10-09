@@ -1,8 +1,7 @@
 {
 	"compilerOptions": {
         "module": "commonjs",
-        "noImplicitAny": true,
-        "preserveConstEnums": true
+        "noImplicitAny": true
     },
     "exclude": [
         "node_modules"
