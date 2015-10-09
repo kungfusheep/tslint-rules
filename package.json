@@ -2,12 +2,13 @@
   "name": "tslint-rules",
   "version": "1.0.0",
   "description": "A bunch of custom rules for tslint.",
-  "main": "index.js",
   "private": true,
   "dependencies": {
     "gulp": "^3.9.0",
-    "typescript": "^1.6.2",
-    "tslint": "^2.5.1"
+    "gulp-tslint": "^3.3.0",
+    "gulp-typescript": "^2.9.2",
+    "tslint": "^2.5.1",
+    "typescript": "^1.6.2"
   },
   "devDependencies": {},
   "scripts": {
