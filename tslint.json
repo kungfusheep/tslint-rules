@@ -1,8 +1,8 @@
 {
-	"rulesDirectory":"rulesOut/",
     "rules": {
     	"import-no-alias": true,
     	"naming-scheme": true,
+        
         "align": [true,
             "parameters",
             "arguments",
