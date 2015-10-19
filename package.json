@@ -4,17 +4,14 @@
   "description": "A bunch of custom rules for tslint.",
   "private": true,
   "dependencies": {
-    "gulp": "^3.9.0",
-    "gulp-tslint": "^3.3.0",
-    "gulp-typescript": "^2.9.2",
     "tslint": "^2.5.1",
     "typescript": "^1.6.2"
   },
   "devDependencies": {},
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "build": "node_modules/typescript/bin/tsc",
-    "watch": "node_modules/typescript/bin/tsc --watch"
+    "build": "node \"./node_modules/typescript/bin/tsc\"",
+    "watch": "node \"./node_modules/typescript/bin/tsc\" --watch"
   },
   "author": "@kungfusheep",
   "license": "ISC"

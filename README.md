@@ -1,3 +1,9 @@
+
+Run an npm install (from this directory) before doing any dev work on these plugins. 
+
+To build, run `npm run build` or `npm run watch`
+
+
 ## tslint-rules
 A set of custom tslint rules.
 

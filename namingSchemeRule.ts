@@ -58,7 +58,7 @@ class NamingSchemeWalker extends Lint.RuleWalker {
         // console.log(node.name.getText(), Lint.hasModifier(node.modifiers, ts.SyntaxKind.StaticKeyword));
         
         const name = node.name.getText();
-        if (Lint.hasModifier(node.modifiers, ts.SyntaxKind.StaticKeyword)) {
+        if (Lint.hasModifier(node.modifiers, ts.SyntaxKind.StaticKeyword)) { 
 
             if (!this.validateStaticProperty(name)) {
                 this.addFailure(this.createFailure(node.getStart(), node.getWidth(), Rule.STATIC_PROPERTIES_FAIL));
@@ -102,7 +102,7 @@ class NamingSchemeWalker extends Lint.RuleWalker {
      */
     private validateStaticProperty(name:string) : boolean {
 
-        return name.charAt(0) === name.charAt(0).toUpperCase();
+        return name.charAt(0) === name.charAt(0).toUpperCase() || (this.getSourceFile().fileName||"").indexOf("Locator") > -1;
     }
 
     /**
@@ -110,7 +110,7 @@ class NamingSchemeWalker extends Lint.RuleWalker {
      */
     private validateStaticMethod(name: string): boolean {
 
-        return name.charAt(0) === name.charAt(0).toUpperCase() && name.indexOf("_") === -1;
+        return (name.charAt(0) === name.charAt(0).toUpperCase() || name.indexOf("get") === 0 || name.indexOf("set") === 0) && name.indexOf("_") === -1;
     }
 
     /**
